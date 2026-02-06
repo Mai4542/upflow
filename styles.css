@@ -513,6 +513,9 @@ a:hover{
             }
         }
 @media (max-width: 768px){
+    header {
+        padding: 0 20px;
+    }
     .nav-links{
         display: none;
         flex-direction: column;
@@ -531,6 +534,9 @@ a:hover{
     }
 
     .menu-icon{
+        display: block;
+    }
+    .menu-icon {
         display: block;
     }
 }
@@ -565,5 +571,127 @@ a:hover{
     }
     .stats-card{
         display: none;
+    }
+}
+.heroo {
+    height: 300px;
+    background: url("./assets/im21.png") center/cover no-repeat;
+    position: relative;
+    background-color: #1B1B1B;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+.heroo h1 {
+    font-size: 35px;
+    color: #fff;
+    
+    font-weight: 800;
+}
+
+.heroo h1 span {
+    color: #ff7a00;
+}
+
+.heroo button {
+    background: #ff7a00;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+   
+}
+
+
+.cardss {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.cardd {
+    position: relative;
+    overflow: hidden;
+   
+}
+
+.cardd img {
+    width: 450px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.cardd h3 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 18px;
+}
+.orange-bar {
+    background: #FF6709;
+    padding: 25px;
+    text-align: center;
+    font-weight: bold;
+    height: 100px;
+}
+
+.orange-bar p {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.4;
+    word-break: break-word;
+}
+.orange-text {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee {
+    display: inline-block;
+    animation: moveText 30s linear infinite;
+}
+
+.marquee span {
+    margin-right: 40px;
+    font-size: 40px;
+  
+    color: #fff;
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.orange-text span::after {
+    content: " •";
+}
+
+.orange-text span:last-child::after {
+    content: "";
+}
+
+@media (max-width: 768px) {
+    .cardss {
+        grid-template-columns: 1fr;
+    }
+     .orange-bar p {
+        font-size: 18px;
     }
 }
